@@ -8,22 +8,24 @@ class Solution {
        if(target==nums[mid]) return mid;
        else
        {
-       if(nums[mid]< target) 
-       {
-        int ans = search(Arrays.copyOfRange(nums,mid,nums.length),target);    
-        if(ans==-1)
-        {
-            return -1; 
-        }
-        else 
-        {
-            return ans + mid;
-        }
-       }
-       else 
-       {
-        return search(Arrays.copyOfRange(nums,0,mid),target);
-       }
+           //iteriative recursive part start here
+           if(nums[mid]< target) 
+           {
+            int ans = search(Arrays.copyOfRange(nums,mid,nums.length),target);    
+                if(ans==-1)
+                {
+                    return -1; 
+                }
+                else 
+                {
+                    //searching second half , so must add back the middle index to preserve index order. 
+                    return ans + mid;
+                }
+           }
+           else 
+           {
+            return search(Arrays.copyOfRange(nums,0,mid),target);
+           }
       
        }
 
