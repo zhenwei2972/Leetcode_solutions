@@ -23,6 +23,7 @@ class Solution {
         while(!queue.isEmpty())
         {
             int count = queue.size();
+            //need to use for loop to increment depth at a per level basis
             depth++;
             for(int i =0; i <count; i++)
             {
