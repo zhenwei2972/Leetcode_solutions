@@ -32,7 +32,7 @@ class Solution {
             //remove if node is problematic
             //get next next node
             curr.next  = curr.next.next;
-
+            
         }
         else curr = curr.next;
         
